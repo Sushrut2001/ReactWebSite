@@ -11,7 +11,6 @@ const Navbar = () => {
                     <li className="cursor-pointer py-1 rounded-2xl  hover:text-white duration-900">Contact Us</li>
                 </ul>
                 <div className="grid text-white">
-                    {/* <button>Login</button> */}
                     <button className="bg-blue-500 px-4 rounded-2xl hover:bg-blue-600">Login/Register</button>
                 </div>
             </nav>
