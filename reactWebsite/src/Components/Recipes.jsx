@@ -30,7 +30,7 @@ const Recipes = () => {
                             </div>
                             <div className='col-span-2 text-xl m-1'>
                                 <h1 className='text-xl '>Name: {recipe.name}</h1>
-                                <h1>Making Time: {recipe.cookTimeMinutes}</h1>
+                                <h1>Making Time: {recipe.cookTimeMinutes} min</h1>
                                 <h1>Cuisine: {recipe.cuisine}</h1>
                                 <h1>Difficulty: {recipe.difficulty}</h1>
                                 <h1>Calories: {recipe.caloriesPerServing}</h1>

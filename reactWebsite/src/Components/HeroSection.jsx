@@ -5,8 +5,10 @@ const HeroSection = () => {
             <div className="">
                 <img src={myImage} alt="" className='h-screen w-screen ' />
             </div>
-            <div>
-                
+            <div className=''>
+                <div>
+                    
+                </div>
             </div>
         </div>
     )
