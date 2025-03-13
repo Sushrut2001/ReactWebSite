@@ -5,12 +5,14 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-rou
 import Recipes from "./Components/Recipes";
 import AboutSection from "./Components/AboutSection";
 import ContactSection from "./Components/ContactSection";
+import SideBar from "./Components/SideBar";
 
 function App() {
 
   return (
-    <div className="overflow-auto scrollbar-hide">
+    <div className="">
     <BrowserRouter >
+    <SideBar/>
     <Navbar/>
       <Routes>
         <Route path="/" element={<HeroSection/>}></Route>

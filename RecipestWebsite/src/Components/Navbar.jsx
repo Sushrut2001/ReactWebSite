@@ -5,16 +5,9 @@ import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
 
 const Navbar = () => {
-     
-    const [showMenu,setshowMenu] = useState(false);
-    // const [hideMenu,sethideMenu] = useState(true);
-    let backgroundClass ="hidden"
-    if(showMenu){
-        backgroundClass += "bg-black-300 bg-blend-overlay"
-    }else{
-        backgroundClass += "hidden"
-    }
-
+   const [showMenu, setshowMenu] = useState(false)
+   const [hiddenMenu, sethiddenMenu] = useState(true)
+ 
 
 
     return (
@@ -46,11 +39,9 @@ const Navbar = () => {
                         <button className="bg-[#E5D0A6] px-4 py-1 rounded-2xl hover:bg-[#c49f57] drop-shadow-2xl ">Sign In</button>
                     </Link>
                 </div>
-                <div className="-rotate-180 mr-3">
+                <div className="rotate-90 mr-3 lg:hidden">
                     <span className="text-[#E5D0A6] text-3xl">
-                        <button className={backgroundClass} onClick={()=>{setshowMenu(showMenu)}}>{showMenu? <MdOutlineRestaurantMenu />:<GiForkKnifeSpoon />}</button>
-                    
-                   
+                        <button className="..." onClick={() => { setshowMenu(!showMenu)}}>{showMenu ? <MdOutlineRestaurantMenu /> : <GiForkKnifeSpoon />}</button>
                     </span>
                 </div>
             </nav>

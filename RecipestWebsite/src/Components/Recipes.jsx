@@ -24,7 +24,7 @@ const Recipes = () => {
             <div className='conatiner mx-auto p-6'>
                 <div className='grid place-items-center  md:grid-cols-2 gap-10'>
                     {recipes.map((recipe) => (
-                        <div className='bg-[#E5D0A6] grid md:grid-cols-3 transition-transform duration-300 ease-in-out transform hover:scale-110 place-content-around rounded-2xl md:rounded-2xl '>
+                        <div className='bg-[#E5D0A6] grid md:grid-cols-3 transition-transform duration-300 ease-in-out transform hover:scale-105 place-content-around rounded-2xl md:rounded-2xl '>
                             <div className='...'>
                                 <img className='rounded-t-2xl object-cover  md:rounded-l-2xl duration-300 hover:opacity-50  h-[150px] w-screen' src={recipe.image} alt={recipe.name} />
                             </div>
