@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="">
     <BrowserRouter >
-    <SideBar/>
+    {/* <SideBar/> */}
     <Navbar/>
       <Routes>
         <Route path="/" element={<HeroSection/>}></Route>

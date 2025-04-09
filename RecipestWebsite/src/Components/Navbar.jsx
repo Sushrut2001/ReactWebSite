@@ -3,10 +3,11 @@ import { GiForkKnifeSpoon } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
+import SideBar from "./SideBar";
 
 const Navbar = () => {
    const [showMenu, setshowMenu] = useState(false)
-   const [hiddenMenu, sethiddenMenu] = useState(true)
+   const [showSidebar, setshowSidebar] = useState(false)
  
 
 
@@ -39,9 +40,9 @@ const Navbar = () => {
                         <button className="bg-[#E5D0A6] px-4 py-1 rounded-2xl hover:bg-[#c49f57] drop-shadow-2xl ">Sign In</button>
                     </Link>
                 </div>
-                <div className="rotate-90 mr-3 lg:hidden">
+                <div className=" mr-3 lg:hidden">
                     <span className="text-[#E5D0A6] text-3xl">
-                        <button className="..." onClick={() => { setshowMenu(!showMenu)}}>{showMenu ? <MdOutlineRestaurantMenu /> : <GiForkKnifeSpoon />}</button>
+                        <button className="..." onClick={() => { setshowMenu(!showMenu)}}>{showMenu ? <GiForkKnifeSpoon /> : <SideBar />}</button>
                     </span>
                 </div>
             </nav>

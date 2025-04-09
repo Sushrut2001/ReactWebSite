@@ -9,14 +9,6 @@ const Login = () => {
     const [showregPassword, setregshowPassword] = useState(false)
     const [showcfPassword, setcfPassword] = useState(false)
 
-    useEffect(() => {
-        if (showcfPassword) return
-        const interval = setInterval(() => {
-            
-        })
-        return () => clearInterval(interval)
-    }, [showcfPassword])
-
     // Login
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -81,7 +73,8 @@ const Login = () => {
                                 <label htmlFor="" className="block text-lg">Confirm Password</label>
                                 <div className="relative">
                                     <input value={confirmpassword} onChange={(e) => setconfirmPassword(e.target.value)} type="password" className="w-full p-2 border rounded" placeholder="Confirm Password" />
-                                    <button className="absolute right-3 top-3" onMouseEnter={() => {setcfPassword(true);!showcfPassword}} onMouseLeave={() => {setcfPassword(false);showcfPassword}}>{showcfPassword? <FaEye/>:<FaEyeSlash/>}</button>
+                                    <button className="absolute right-3 top-3" onClick={() => setcfPassword(!showcfPassword)}>{showcfPassword ? <FaEye /> : <FaEyeSlash />}</button>
+                                    {/* <button className="absolute right-3 top-3" onMouseEnter={() => {setcfPassword(true);!showcfPassword}} onMouseLeave={() => {setcfPassword(false);showcfPassword}}>{showcfPassword? <FaEye/>:<FaEyeSlash/>}</button> */}
                                     {/* <div className="absolute " onMouseEnter={() => setcfPassword(true)} onMouseLeave={() => setcfPassword(false)}>{showcfPassword? <FaEye/>:<FaEyeSlash/>}</div> */}
                                 </div>
                             </div>
