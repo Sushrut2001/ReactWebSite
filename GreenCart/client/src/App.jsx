@@ -1,19 +1,14 @@
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import Layout from "./Layout"; // We'll move useLocation() logic here
 
 const App = () => {
     return (
-        <div>
-            <BrowserRouter>
-            <NavBar/>
-                <Routes>
-                {/* <Route path="/" element={<HeroSection/>}></Route> */}
-                {/* <Route path="/Recipes" element={<Recipes/>}></Route>  */}
-                </Routes>
-            </BrowserRouter>
-        </div>
-    )
-}
+        <BrowserRouter>
+            <Layout />
+        </BrowserRouter>
+    );
+};
 
 export default App;
